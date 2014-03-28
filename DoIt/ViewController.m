@@ -24,8 +24,26 @@
 {
     [super viewDidLoad];
     items = [[NSMutableArray alloc] initWithObjects:@"One", @"Two", @"Three", nil];
-    BOOL isEditModeEnabled = NO;
-	// Do any additional setup after loading the view, typically from a nib.
+    UISwipeGestureRecognizer *setPriority = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onswipe:)];
+    setPriority.direction = UISwipeGestureRecognizerDirectionRight;
+    [self.view addGestureRecognizer:setPriority];
+}
+
+-(void)onswipe:(UIGestureRecognizer *)setPriority{
+    CGPoint point = [setPriority locationInView:myTableView];
+    NSIndexPath *indexPath = [myTableView indexPathForRowAtPoint:point];
+    UITableViewCell *pCell = [myTableView cellForRowAtIndexPath:indexPath];
+//    if ([pCell.backgroundColor isEqual:nil]) {
+//        NSLog(@"d");
+//        pCell.backgroundColor = [UIColor greenColor];
+//    }
+//    } else if (pCell.backgroundColor == [UIColor greenColor]) {
+//        pCell.backgroundColor = [UIColor yellowColor];
+//    } else if (pCell.backgroundColor == [UIColor yellowColor]) {
+//        pCell.backgroundColor = [UIColor redColor];
+//    }
+    //pCell.backgroundColor = [UIColor redColor];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -89,10 +107,6 @@
     isEditModeEnabled =! isEditModeEnabled;
 
     
-}
-- (IBAction)setPriority:(UISwipeGestureRecognizer *)sender
-{
-   
 }
 
 

@@ -29,12 +29,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="vXZ-lx-hvc" id="dB5-Su-Pg6"/>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="cpg-oV-c7l"/>
-                                    <outletCollection property="gestureRecognizers" destination="3we-s9-CSq" appends="YES" id="coD-zf-ROO"/>
                                 </connections>
                             </tableView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MQn-Ax-uWR">
@@ -73,11 +73,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="3we-s9-CSq">
-                    <connections>
-                        <action selector="setPriority:" destination="vXZ-lx-hvc" id="hKX-Fr-iUZ"/>
-                    </connections>
-                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="664" y="77"/>
         </scene>
